@@ -8,7 +8,7 @@ class RestCountries():
     
     def get_info(self, country):
         url = f'https://restcountries.com/v3.1/name/{country}'
-        file_path = 'res.txt'
+        file_path = f'{country}.txt'
         if os.path.exists(file_path):
             with open(file_path, 'r', encoding='utf-8') as f:
                 res = json.load(f)
@@ -59,7 +59,7 @@ Delivery: {delivery_price}
 
 
 r = RestCountries()
-r('Japan')
+r('Ukraine')
         
 goods = EbayGoods()
 goods('https://www.ebay.com/itm/403962915270')
